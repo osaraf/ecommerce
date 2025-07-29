@@ -1,6 +1,7 @@
 package com.tutorials.ecomm.shared.authentication.domain;
 
-import com.tutorials.ecomm.shared.error.Assert;
+
+import com.tutorials.ecomm.shared.error.domain.Assert;
 
 import java.util.Collections;
 import java.util.Set;

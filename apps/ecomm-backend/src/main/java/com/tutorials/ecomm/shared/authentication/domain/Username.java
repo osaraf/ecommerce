@@ -1,7 +1,7 @@
 package com.tutorials.ecomm.shared.authentication.domain;
 
 
-import com.tutorials.ecomm.shared.error.Assert;
+import com.tutorials.ecomm.shared.error.domain.Assert;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Optional;
