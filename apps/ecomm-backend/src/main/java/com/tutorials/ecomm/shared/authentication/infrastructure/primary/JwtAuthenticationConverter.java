@@ -1,6 +1,6 @@
 package com.tutorials.ecomm.shared.authentication.infrastructure.primary;
 
-import fr.codecake.ecom.shared.authentication.application.AuthenticatedUser;
+import com.tutorials.ecomm.shared.authentication.application.AuthenticatedUser;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.lang.NonNull;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
