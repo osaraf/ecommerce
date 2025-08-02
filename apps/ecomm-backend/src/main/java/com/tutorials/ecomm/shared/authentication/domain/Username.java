@@ -9,6 +9,7 @@ import java.util.Optional;
 public record Username(String username) {
   public Username {
     Assert.field("username", username).notBlank().maxLength(100);
+    Assert.notBlank("hi","there");
   }
 
   public String get() {
@@ -18,4 +19,5 @@ public record Username(String username) {
   public static Optional<Username> of(String username) {
     return Optional.ofNullable(username).filter(StringUtils::isNotBlank).map(Username::new);
   }
+
 }
