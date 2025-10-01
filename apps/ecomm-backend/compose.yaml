@@ -8,5 +8,5 @@ services:
       - 'POSTGRES_DB=mydatabase'
       - 'POSTGRES_PASSWORD=secret'
     volumes:
-      - 'C:/Users/rafea/volumes/ecomm/postgres:/var/lib/postgresql/data'
+      - './postgres-data:/var/lib/postgresql/data'
 
