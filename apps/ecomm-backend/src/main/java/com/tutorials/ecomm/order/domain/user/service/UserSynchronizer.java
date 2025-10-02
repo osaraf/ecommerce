@@ -53,6 +53,6 @@ public class UserSynchronizer {
   }
 
   public void updateAddress(UserAddressToUpdate userAddressToUpdate) {
-    userRepository.updateAddress(userAddressToUpdate.userPublicID(), userAddressToUpdate.userAddress());
+    userRepository.updateAddress(userAddressToUpdate.userPublicID(), userAddressToUpdate);
   }
 }
