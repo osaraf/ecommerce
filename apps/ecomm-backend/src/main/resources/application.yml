@@ -76,3 +76,9 @@ application:
     allow-credentials: false
     max-age: 300
 
+  kinde:
+    api: https://rafea.kinde.com
+    client-id: ${KINDE_CLIENT_ID}
+    client-secret: ${KINDE_CLIENT_SECRET}
+    audience: https://rafea.kinde.com/api
+
