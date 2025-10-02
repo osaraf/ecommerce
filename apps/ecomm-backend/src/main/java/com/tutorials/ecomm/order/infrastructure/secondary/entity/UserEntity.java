@@ -22,12 +22,12 @@ public class UserEntity extends AbstractAuditingEntity<Long>{
   public boolean equals(Object o) {
     if (this == o) return true;
     if (!(o instanceof UserEntity that)) return false;
-    return Objects.equals(public_id, that.public_id);
+    return Objects.equals(publicId, that.publicId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(public_id);
+    return Objects.hash(publicId);
   }
 
   @Id
@@ -44,8 +44,8 @@ public class UserEntity extends AbstractAuditingEntity<Long>{
   private String email;
   @Column(name = "image_url")
   private String imageUrl;
-  @Column(name = "public_id")
-  private UUID public_id;
+  @Column(name = "public_id",columnDefinition = "uuid")
+  private UUID publicId;
   @Column(name = "address_street")
   private String addressStreet;
   @Column(name = "address_city")
@@ -80,7 +80,7 @@ public class UserEntity extends AbstractAuditingEntity<Long>{
     }
 
     if (user.getUserPublicID() != null) {
-      userEntityBuilder.public_id(user.getUserPublicID().value());
+      userEntityBuilder.publicId(user.getUserPublicID().value());
     }
 
     if (user.getUserAddress() != null) {
@@ -122,7 +122,7 @@ public class UserEntity extends AbstractAuditingEntity<Long>{
       .userLastName(new UserLastName(userEntity.getLastName()))
       .userFirstName(new UserFirstName(userEntity.getFirstName()))
       .authorities(AuthorityEntity.toDomain(userEntity.getAuthorities()))
-      .userPublicID(new UserPublicID(userEntity.getPublic_id()))
+      .userPublicID(new UserPublicID(userEntity.getPublicId()))
       .lastModifiedDate(userEntity.getLastModifiedDate())
       .createDate(userEntity.getCreatedDate())
       .dbId(userEntity.getId())
