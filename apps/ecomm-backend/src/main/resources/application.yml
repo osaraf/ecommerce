@@ -50,9 +50,9 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: https://codecake.kinde.com
-          jwk-set-uri: https://codecake.kinde.com/.well-known/jwks
-          audiences: http://localhost:8080/api
+          issuer-uri: https://rafea.kinde.com
+          jwk-set-uri: https://rafea.kinde.com/.well-known/jwks
+          audiences: http://localhost:8081/api
   devtools:
     restart:
       enabled: false
@@ -65,7 +65,7 @@ spring:
       max-request-size: 100MB
 
 server:
-  port: 8080
+  port: 8081
 
 application:
   cors:
@@ -80,5 +80,4 @@ application:
     api: https://rafea.kinde.com
     client-id: ${KINDE_CLIENT_ID}
     client-secret: ${KINDE_CLIENT_SECRET}
-    audience: https://rafea.kinde.com/api
-
+    audience: http://localhost:8081/api
