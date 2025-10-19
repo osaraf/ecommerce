@@ -1,12 +1,14 @@
 services:
   database:
-    image: 'postgres:latest'
+    image: postgres
+    container_name: ecommerce-db
     ports:
       - '5432:5432'
     environment:
-      - 'POSTGRES_USER=myuser'
-      - 'POSTGRES_DB=mydatabase'
-      - 'POSTGRES_PASSWORD=secret'
+      - POSTGRES_USER=myuser
+      - POSTGRES_DB=mydatabase
+      - POSTGRES_PASSWORD=secret
     volumes:
-      - './postgres-data:/var/lib/postgresql/data'
-
+      - 'postgres-data:/var/lib/postgresql/data'
+volumes:
+  postgres-data:
