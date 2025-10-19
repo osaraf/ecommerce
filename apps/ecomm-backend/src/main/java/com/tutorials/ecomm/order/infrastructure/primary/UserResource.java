@@ -18,6 +18,7 @@ public class UserResource {
 
   @GetMapping("/authenticated")
   public ResponseEntity<RestUser> getAuthenticatedUser(@AuthenticationPrincipal Jwt jwtToken, @RequestParam boolean forceResync){
+    System.out.println("endpoint authenticated get called");
     final User autheticatedUser = usersApplicationService.getAuthenticatedUserWithSync(jwtToken, forceResync);
 
     final RestUser restUser = RestUser.from(autheticatedUser);
