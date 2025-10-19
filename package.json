@@ -19,7 +19,13 @@
     "@fortawesome/free-brands-svg-icons": "^7.0.0",
     "@fortawesome/free-regular-svg-icons": "^7.0.0",
     "@fortawesome/free-solid-svg-icons": "^7.0.0",
+    "@ng-web-apis/common": "^4.12.0",
+    "@ng-web-apis/universal": "^4.12.0",
+    "@tanstack/angular-query-devtools-experimental": "^5.87.5",
+    "@tanstack/angular-query-experimental": "^5.90.2",
+    "angular-auth-oidc-client": "^20.0.2",
     "express": "^4.21.2",
+    "ngxtension": "^6.0.0",
     "rxjs": "~7.8.0",
     "zone.js": "~0.15.0"
   },

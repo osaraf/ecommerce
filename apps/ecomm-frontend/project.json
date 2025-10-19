@@ -8,11 +8,15 @@
   "targets": {
     "build": {
       "executor": "@angular/build:application",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/ecomm-frontend",
         "browser": "apps/ecomm-frontend/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/ecomm-frontend/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -21,7 +25,9 @@
             "input": "apps/ecomm-frontend/public"
           }
         ],
-        "styles": ["apps/ecomm-frontend/src/styles.scss"],
+        "styles": [
+          "apps/ecomm-frontend/src/styles.scss"
+        ],
         "server": "apps/ecomm-frontend/src/main.server.ts",
         "ssr": {
           "entry": "apps/ecomm-frontend/src/server.ts"
@@ -42,12 +48,24 @@
               "maximumError": "8kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "fileReplacements": [
+            {
+              "replace": "apps/ecomm-frontend/src/environments/environment.ts",
+              "with": "apps/ecomm-frontend/src/environments/environment.production.ts"
+            }
+          ]
         },
         "development": {
           "optimization": false,
           "extractLicenses": false,
-          "sourceMap": true
+          "sourceMap": true,
+          "fileReplacements": [
+            {
+              "replace": "apps/ecomm-frontend/src/environments/environment.ts",
+              "with": "apps/ecomm-frontend/src/environments/environment.development.ts"
+            }
+          ]
         }
       },
       "defaultConfiguration": "production"
